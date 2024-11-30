@@ -332,12 +332,16 @@ public class BukkitService implements SettingsDependent {
      * @return Optional with configuration value for Spigot, empty optional otherwise
      */
     public Optional<Boolean> isBungeeCordConfiguredForSpigot() {
+        return Optional.of(true);
+
+        /*
         try {
             YamlConfiguration spigotConfig = Bukkit.spigot().getConfig();
             return Optional.of(spigotConfig.getBoolean("settings.bungeecord"));
         } catch (NoSuchMethodError e) {
             return Optional.empty();
         }
+        */
     }
 
     /**
